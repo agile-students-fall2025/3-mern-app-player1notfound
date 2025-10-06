@@ -5,6 +5,7 @@ import MessageStandalone from './MessageStandalone'
 import Home from './Home'
 import Header from './Header'
 import Footer from './Footer'
+import About from "./pages/About";
 
 const App = props => {
   return (
@@ -13,6 +14,7 @@ const App = props => {
         <Header />
         <main className="App-main">
           <Routes>
+          <Route path="/about" element={<About />} />
             {/* a route for the home page */}
             <Route path="/" element={<Home />} />
 
