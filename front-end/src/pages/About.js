@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React,{ useEffect, useState }from "react";
 import axios from "axios";
 
 function About() {
-  const [data, setData] = useState(null);
+  const [data,setData]=useState(null);
 
-  useEffect(() => {
+  useEffect(()=> {
     axios.get("http://localhost:5002/api/about")
-      .then(res => setData(res.data))
-      .catch(err => console.error(err));
-  }, []);
+      .then(res=>setData(res.data))
+      .catch(err=>console.error(err));
+  },[]);
 
   if (!data) return <p>Loading...</p>;
 
